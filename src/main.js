@@ -52,6 +52,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Project Category Filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+function applyFilter(filter, reveal) {
+    projectCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('is-hidden', !show);
+        // Reveal cards unhidden by a click so they aren't stuck at the
+        // scroll-animation's initial opacity:0 state.
+        if (show && reveal) card.classList.add('visible');
+    });
+}
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+            const active = b === btn;
+            b.classList.toggle('is-active', active);
+            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        applyFilter(btn.dataset.filter, true);
+    });
+});
+
+const activeFilterBtn = document.querySelector('.filter-btn.is-active');
+if (activeFilterBtn) applyFilter(activeFilterBtn.dataset.filter, false);
+
 // Background Particles Canvas (Simple elegant glow effect)
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
