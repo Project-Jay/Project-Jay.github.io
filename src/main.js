@@ -54,7 +54,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Project Category Filter
 const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const projectCards = document.querySelectorAll('.timeline-item');
+
+// Assign alternating left/right classes among the currently visible items so
+// the zig-zag layout stays correct after filtering hides some items.
+function layoutTimeline() {
+    let i = 0;
+    projectCards.forEach(card => {
+        if (card.classList.contains('is-hidden')) return;
+        card.classList.toggle('tl-left', i % 2 === 0);
+        card.classList.toggle('tl-right', i % 2 === 1);
+        i++;
+    });
+}
 
 function applyFilter(filter, reveal) {
     projectCards.forEach(card => {
@@ -64,6 +76,7 @@ function applyFilter(filter, reveal) {
         // scroll-animation's initial opacity:0 state.
         if (show && reveal) card.classList.add('visible');
     });
+    layoutTimeline();
 }
 
 filterBtns.forEach(btn => {
