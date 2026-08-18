@@ -566,7 +566,14 @@ p {
 .contact-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
+}
+
+.contact-location {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .contact-link {
