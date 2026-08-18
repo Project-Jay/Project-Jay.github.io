@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MES/WPF Developer | Portfolio</title>
+    <title>정재우 | C# · .NET 제조 시스템 개발자</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -25,7 +25,8 @@
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#career">Career</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -36,9 +37,33 @@
             <!-- Hero Section -->
             <section id="hero" class="hero-section">
                 <div class="hero-content">
-                    <h2 class="greeting fade-in-up">안녕하세요, <b>정재우</b>입니다</h2>
-                    <h1 class="main-title glitched fade-in-up delay-1">S/W 개발자</h1>
-                    <p class="subtitle fade-in-up delay-2">공학적 사고와 문제를 끝까지 해결하는 집요함을 바탕으로,<br>생산 설비가 멈추지 않게 만드는 실무형 엔지니어입니다.</p>
+                    <h2 class="greeting fade-in-up">안녕하세요, <b>정재우 (Jaewoo Jung)</b>입니다</h2>
+                    <h1 class="main-title glitched fade-in-up delay-1">C# · .NET 기반<br>제조 시스템 개발자</h1>
+                    <p class="subtitle fade-in-up delay-2">WPF · MSSQL · Stored Procedure<br>비전 검사부터 MES/POP까지, 제조 데이터의 처음과 끝</p>
+                    <p class="hero-lead fade-in-up delay-2">
+                        제조 현장의 데이터를 다루는 C#/.NET 개발자입니다.
+                        이차전지 라인의 비전 검사 소프트웨어를 개발하며 검사 결과를 어떻게 저장하고 조회하게 만들 것인가를 고민했고,
+                        지금은 MES/POP 시스템 개발자로서 작업지시·생산실적·재고·출하·검사 이력 데이터를 설계하고 다루고 있습니다.
+                        설비 신호부터 DB 테이블, 작업자가 실제로 누르는 버튼까지 한 흐름으로 이해하는 것이 저의 강점입니다.
+                    </p>
+                    <div class="hero-metrics fade-in-up delay-3">
+                        <div class="metric-card">
+                            <span class="metric-value">4년 9개월</span>
+                            <span class="metric-label">총 경력</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">C# / .NET / WPF / MSSQL</span>
+                            <span class="metric-label">주력 스택</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">10건</span>
+                            <span class="metric-label">수행 프로젝트 (단독 메인 2건 포함)</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">이차전지 검사 · 제조 MES/POP</span>
+                            <span class="metric-label">도메인</span>
+                        </div>
+                    </div>
                     <a href="#about" class="cta-button fade-in-up delay-3">Explore My Work</a>
                 </div>
             </section>
@@ -46,22 +71,22 @@
             <!-- About Section -->
             <section id="about" class="section">
                 <div class="section-content">
-                    <h2 class="section-title reveal-text">About Focus</h2>
+                    <h2 class="section-title reveal-text">About</h2>
                     <div class="about-grid">
                         <div class="about-card slide-in-left">
                             <i class="fa-solid fa-gears card-icon"></i>
-                            <h3>문제 해결의 집요함</h3>
-                            <p>단순한 오류 수정을 넘어 근본적인 원인(예: PLC 포트 버퍼 충돌 등)을 찾아내어 시스템 구조를 개선합니다.</p>
+                            <h3>어떻게 일해왔는가</h3>
+                            <p>대학에서 정보통신공학을 전공하고 C++과 C#을 익힌 뒤, 이차전지 검사 소프트웨어 개발자로 커리어를 시작했습니다. 입사 1년차에 단독으로 캔 외관 검사기를 맡아 개발부터 셋업, 현장 대응까지 책임졌던 경험이 지금의 기준을 만들었습니다. 라인이 멈추면 곧바로 손실이 발생하는 환경이었기 때문에, '동작하는 코드'가 아니라 '멈추지 않는 코드'를 써야 한다는 것을 몸으로 배웠습니다.</p>
                         </div>
                         <div class="about-card slide-in-top">
-                            <i class="fa-solid fa-code card-icon"></i>
-                            <h3>융합적 시각 (SW & HW)</h3>
-                            <p>C#, C++ 등의 코드 레벨뿐 아니라 IO/제어 보드, 센서 및 통신 등 하드웨어 경계를 넘나드는 진단 및 융합 설계를 수행합니다.</p>
+                            <i class="fa-solid fa-database card-icon"></i>
+                            <h3>왜 데이터인가</h3>
+                            <p>검사 결과를 JSON으로 직렬화해 상위 서버로 보내는 모듈, SQLite·MariaDB 기반 검사 이력 저장 및 조회 기능을 맡으면서 관심이 자연스럽게 데이터 쪽으로 옮겨갔습니다. 현장에 정말 필요한 것은 한 장의 판정 결과가 아니라, 축적된 이력을 언제든 조회하고 근거로 삼을 수 있는 구조였기 때문입니다.</p>
                         </div>
                         <div class="about-card slide-in-right">
                             <i class="fa-solid fa-chart-line card-icon"></i>
-                            <h3>데이터 기반 분석 & 연동</h3>
-                            <p>비전 검사 데이터를 JSON, SQLITE, MariaDB 기반으로 관리 및 상위 서버와 연동하여 품질 의사결정을 지원합니다.</p>
+                            <h3>지금 하고 있는 것</h3>
+                            <p>현재는 C# 기반 MES/POP 시스템을 개발하고 있습니다. WPF·WinForms로 작업 단말 화면을 만들고, SQL Server 저장 프로시저와 ADO.NET으로 작업지시·생산실적·재고·출하·검사 이력을 다룹니다. 데이터 정합성 검증, 중복 처리 차단, ERP 연계 같은 작업들은 화려하지 않지만 시스템의 신뢰를 결정하는 부분이고, 저는 그런 일을 오래 잘하고 싶습니다.</p>
                         </div>
                     </div>
                 </div>
